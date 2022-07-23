@@ -1,0 +1,1 @@
+export const CREATE_ACCOUNT_ENDPOINT = 'https://run.mocky.io/v3/1d98046e-91a7-4c2f-a802-188ca1262dd1';

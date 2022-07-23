@@ -1,2 +1,4 @@
 /base/node_modules/
 /base/svelte-ki/
+/authentication/node_modules/
+/authentication/svelte-ki/
