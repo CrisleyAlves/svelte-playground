@@ -1,0 +1,20 @@
+:root {
+  --blue: #1DA1F2;
+  --black: #14171A;
+  --red: #ff4154;
+  --green: #376e37;
+  --dark-gray: #657786;
+  --extra-light-gray: #E1E8ED;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Light', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
