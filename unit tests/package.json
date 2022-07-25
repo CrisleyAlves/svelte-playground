@@ -1,0 +1,58 @@
+{
+	"name": "base",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"test": "jest",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@babel/core": "^7.18.9",
+		"@babel/preset-env": "^7.18.9",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/svelte": "^3.1.3",
+		"babel-jest": "^28.1.3",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"jest": "^28.1.3",
+		"jest-environment-jsdom": "^28.1.3",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte": "^3.44.0",
+		"svelte-jester": "^2.3.2",
+		"vite": "^3.0.0"
+	},
+	"type": "module",
+	"jest": {
+		"bail": false,
+		"moduleFileExtensions": [
+			"js",
+			"svelte"
+		],
+		"transform": {
+			"^.+\\.js$": "babel-jest",
+			"^.+\\.svelte$": "svelte-jester"
+		},
+		"verbose": true
+	},
+	"babel": {
+		"presets": [
+			[
+				"@babel/preset-env",
+				{
+					"targets": {
+						"node": "current"
+					}
+				}
+			]
+		]
+	}
+}
