@@ -1,0 +1,27 @@
+:root {
+  --primary: #9E1220;
+  --secondary: #052E61;
+  --yellow: #FCA211;
+  --black: #14171A;
+  --red: #ff4154;
+  --dark-gray: #657786;
+  --extra-light-gray: #E1E8ED;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.u-strong {
+  font-weight: 700;
+}
