@@ -7,7 +7,7 @@ import {
 } from "../types"
 
 
-const POSTS_INITIAL_STATE = {
+export const POSTS_INITIAL_STATE = {
   posts: [],
   mainError: null,
   isLoading: false
@@ -18,6 +18,7 @@ export const postsStore = writable(POSTS_INITIAL_STATE);
 export const getStoreValues = () => get(postsStore);
 
 export const postsReducer = (action, payload) => {
+  const currentValues = getStoreValues()
   switch (action.TYPE) {
     case POSTS_LOADING:
       return postsStore.set({
@@ -26,7 +27,6 @@ export const postsReducer = (action, payload) => {
         isLoading: true,
       });
     case POSTS_ERROR:
-      const currentValues = getStoreValues()
       return postsStore.set({
         posts: currentValues.posts,
         mainError: payload.message,
