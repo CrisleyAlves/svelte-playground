@@ -6,7 +6,7 @@ import {
   AUTH_SUCCESS
 } from "../types"
 
-const USER_INITIAL_STATE = {
+export const USER_INITIAL_STATE = {
   user: null,
   mainError: null,
   isLoading: false
