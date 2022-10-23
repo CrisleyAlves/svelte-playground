@@ -16,7 +16,7 @@ const mockedPostsSuccess = [{
 describe('Posts Reducer', () => {
   beforeEach(() => postsReducer({ TYPE: POSTS_RESET }))
 
-  test('should dispatch posts loading action and update isLoading flag', async () => {
+  test('should dispatch posts loading action and update isLoading flag', () => {
     postsReducer({ TYPE: POSTS_SUCCESS }, { posts: mockedPostsSuccess });
     postsReducer({ TYPE: POSTS_LOADING });
     const storeValues = getStoreValues()
@@ -24,21 +24,21 @@ describe('Posts Reducer', () => {
     expect(storeValues.posts.length).toBe(1)
   })
 
-  test('should dispatch posts error action and update main error', async () => {
+  test('should dispatch posts error action and update main error', () => {
     postsReducer({ TYPE: POSTS_ERROR }, { message: 'Error message' });
     const storeValues = getStoreValues()
     expect(storeValues.isLoading).toBeFalsy()
     expect(storeValues.mainError).toBe('Error message')
   })
 
-  test('should dispatch post success action and populate posts', async () => {
+  test('should dispatch post success action and populate posts', () => {
     postsReducer({ TYPE: POSTS_SUCCESS }, { posts: mockedPostsSuccess });
     const storeValues = getStoreValues()
     expect(storeValues.isLoading).toBeFalsy()
     expect(storeValues.posts.length).toBe(1)
   })
 
-  test('should dispatch posts reset action and reset posts state', async () => {
+  test('should dispatch posts reset action and reset posts state', () => {
     postsReducer({ TYPE: POSTS_RESET });
     const storeValues = getStoreValues()
     expect(storeValues).toMatchObject(POSTS_INITIAL_STATE)

@@ -11,13 +11,13 @@ describe('Auth Reducer', () => {
   // Just to reset state values
   beforeEach(() => authReducer({ TYPE: AUTH_LOGOUT }))
 
-  test('should dispatch auth loading action and update isLoading flag', async () => {
+  test('should dispatch auth loading action and update isLoading flag', () => {
     authReducer({ TYPE: AUTH_LOADING });
     const storeValues = getStoreValues()
     expect(storeValues.isLoading).toBeTruthy()
   })
 
-  test('should dispatch auth error action and update main error', async () => {
+  test('should dispatch auth error action and update main error', () => {
     const mainError = 'dummy error message';
 
     authReducer({ TYPE: AUTH_ERROR }, { message: mainError });
@@ -25,7 +25,7 @@ describe('Auth Reducer', () => {
     expect(storeValues.mainError).toBe(mainError)
   })
 
-  test('should dispatch auth success action and update user information', async () => {
+  test('should dispatch auth success action and update user information', () => {
     const user = {
       firstName: 'Crisley',
       email: 'dummy@gmail.com'
@@ -36,7 +36,7 @@ describe('Auth Reducer', () => {
     expect(storeValues.user).toMatchObject(user)
   })
 
-  test('should dispatch auth logout action and reset auth state', async () => {
+  test('should dispatch auth logout action and reset auth state', () => {
     authReducer({ TYPE: AUTH_LOGOUT });
     const storeValues = getStoreValues()
     expect(storeValues).toMatchObject(USER_INITIAL_STATE)
