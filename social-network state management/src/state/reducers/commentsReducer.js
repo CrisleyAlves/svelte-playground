@@ -6,7 +6,7 @@ import {
   ADD_COMMENT_SUCCESS
 } from "../types"
 
-const COMMENTS_INITIAL_STATE = {
+export const COMMENTS_INITIAL_STATE = {
   mainError: null,
   isLoading: false
 };
